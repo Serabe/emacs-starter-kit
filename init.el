@@ -46,6 +46,8 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/undo-tree"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
 
+(add-to-list 'load-path (concat dotfiles-dir "/vendor"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 (setq custom-file (concat dotfiles-dir "custom.el"))
@@ -121,6 +123,9 @@
 
 ;; Occam-mode
 (require 'occam-mode-load)
+
+;; Go-mode
+(require 'go-mode-load)
 
 ;; Color Theme
 (require 'color-theme)
