@@ -19,6 +19,7 @@
 
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
+(setq vendorfiles-dir (concat dotfiles-dir "/vendor"))
 
 ;; Load up ELPA, the package manager
 
@@ -26,11 +27,14 @@
 
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
-(add-to-list 'load-path (concat dotfiles-dir "/vendor"))
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
+(add-to-list 'load-path vendorfiles-dir)
+(add-to-list 'load-path (concat vendorfiles-dir "/color-theme"))
+(add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
+
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 (setq custom-file (concat dotfiles-dir "custom.el"))
+(setq serabe-file (concat dotfiles-dir "serabe.el"))
 
 (require 'package)
 (dolist (source '(("technomancy" . "http://repo.technomancy.us/emacs/")
@@ -81,6 +85,9 @@
 ;; Go-mode
 (require 'go-mode-load)
 
+;; Occam-mode
+(require 'occam-mode-load)
+
 ;; Color Theme
 (require 'color-theme)
 
@@ -88,5 +95,13 @@
   '(progn
      (color-theme-initialize)
      (color-theme-hober)))
+
+;; Yasnippet
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory (concat vendorfiles-dir "/yasnippet/snippets"))
+
+;; My own .el file
+(load serabe-file)
 
 ;;; init.el ends here
