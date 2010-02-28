@@ -26,6 +26,8 @@
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path vendorfiles-dir)
 (add-to-list 'load-path (concat vendorfiles-dir "/color-theme"))
+(add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
