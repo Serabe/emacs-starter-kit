@@ -26,6 +26,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path vendorfiles-dir)
 (add-to-list 'load-path (concat vendorfiles-dir "/color-theme"))
+(add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
@@ -100,6 +101,15 @@
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory (concat vendorfiles-dir "/yasnippet/snippets"))
+
+;; Mode-compile
+(autoload 'mode-compile "mode-compile"
+  "Mode to compile current buffer file based on the major mode" t)
+(global-set-key "\C-cc" 'mode-compile)
+
+(autoload 'mode-compile-kill "mode-compile"
+  "Command to kill a compilation launched by `mode-compile'" t)
+(global-set-key "\C-ck" 'mode-compile-kill)
 
 ;; My own .el file
 (load serabe-file)
