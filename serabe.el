@@ -1,3 +1,10 @@
+;; AUC TEX con RefTEX
+
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(setq reftex-plug-into-AUCTeX t)
+
+(setq TeX-default-mode '"LaTeX-mode")
+
 ;; Function to add paths to clojure classpath.
 ;; Does it works?
 (defun clojure-add-classpath (path)
