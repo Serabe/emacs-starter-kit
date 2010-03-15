@@ -29,6 +29,8 @@
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path vendorfiles-dir)
 (add-to-list 'load-path (concat vendorfiles-dir "/color-theme"))
+(add-to-list 'load-path (concat vendorfiles-dir "/drag-stuff"))
+(add-to-list 'load-path (concat vendorfiles-dir "/erc"))
 (add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
@@ -103,6 +105,12 @@
 (require 'yasnippet)
 (yas/initialize)
 (yas/load-directory (concat vendorfiles-dir "/yasnippet/snippets"))
+
+;; ERC
+(require 'erc)
+
+;; drag-stuff mode
+(require 'drag-stuff)
 
 ;; Mode-compile
 (autoload 'mode-compile "mode-compile"
