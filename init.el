@@ -29,6 +29,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/drag-stuff"))
 (add-to-list 'load-path (concat vendorfiles-dir "/erc"))
 (add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
+(add-to-list 'load-path (concat vendorfiles-dir "/gist"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
@@ -87,6 +88,9 @@
 
 ;; Go-mode
 (require 'go-mode-load)
+
+;; Gist
+(require 'gist)
 
 ;; Occam-mode
 (require 'occam-mode-load)

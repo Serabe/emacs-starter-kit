@@ -9,7 +9,7 @@
 (defadvice erc-track-find-face (around erc-track-find-face-promote-query activate)
   (if (erc-query-buffer-p)
       (setq ad-return-value (intern "erc-current-nick-face"))
-    add-to-it))
+    ad-do-it))
 
 (setq erc-keywords '("serabe" "Serabe" "serabe_"))
 
