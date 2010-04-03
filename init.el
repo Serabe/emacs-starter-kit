@@ -25,12 +25,13 @@
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path vendorfiles-dir)
+(add-to-list 'load-path (concat vendorfiles-dir "/coffee-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/color-theme"))
 (add-to-list 'load-path (concat vendorfiles-dir "/drag-stuff"))
 (add-to-list 'load-path (concat vendorfiles-dir "/erc"))
-(add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/gist"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
 
@@ -86,6 +87,17 @@
 (if (file-exists-p user-specific-dir)
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
+;; coffee-mode
+(require 'coffee-mode)
+(add-to-list 'auto-mode-list '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-list '("Cakefile" . coffee-mode))
+(defun coffee-custom ()
+  "coffee-mode-hook"
+  (set (make-local-variable 'tab-width) 2))
+
+(add-hook coffee-mode-hook
+          '(lambda () (coffee-custom)))
+
 ;; Go-mode
 (require 'go-mode-load)
 
@@ -110,6 +122,10 @@
 
 ;; ERC
 (require 'erc)
+
+;; dot-mode
+(load-file (concat vendorfiles-dir "/dot-mode/graphviz-dot-mode.el"))
+
 
 ;; drag-stuff mode
 (require 'drag-stuff)
