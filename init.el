@@ -89,14 +89,14 @@
 
 ;; coffee-mode
 (require 'coffee-mode)
-(add-to-list 'auto-mode-list '("\\.coffee$" . coffee-mode))
-(add-to-list 'auto-mode-list '("Cakefile" . coffee-mode))
-(defun coffee-custom ()
-  "coffee-mode-hook"
-  (set (make-local-variable 'tab-width) 2))
+;(add-to-list 'auto-mode-list '("\\.coffee$" . coffee-mode))
+;(add-to-list 'auto-mode-list '("Cakefile" . coffee-mode))
+;(defun coffee-custom ()
+;  "coffee-mode-hook"
+;  (set (make-local-variable 'tab-width) 2))
 
-(add-hook coffee-mode-hook
-          '(lambda () (coffee-custom)))
+;(add-hook coffee-mode-hook
+;          '(lambda () (coffee-custom)))
 
 ;; Go-mode
 (require 'go-mode-load)
