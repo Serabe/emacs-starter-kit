@@ -21,7 +21,14 @@
                     (or (buffer-file-name) load-file-name)))
 (setq vendorfiles-dir (concat dotfiles-dir "/vendor"))
 
+;; Load up ELPA, the package manager
+
 (add-to-list 'load-path dotfiles-dir)
+
+(require 'package)
+(package-initialize)
+(require 'starter-kit-elpa)
+
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path vendorfiles-dir)
@@ -52,14 +59,6 @@
 
 ;; backport some functionality to Emacs 22 if needed
 (require 'dominating-file)
-
-;; Load up ELPA, the package manager
-
-(require 'package)
-(package-initialize)
-(require 'starter-kit-elpa)
-
-(load "elpa-to-submit/nxhtml/autostart")
 
 ;; Load up starter kit customizations
 
