@@ -10,3 +10,6 @@
 [submodule "vendor/coffee-mode"]
 	path = vendor/coffee-mode
 	url = git://github.com/defunkt/coffee-mode.git
+[submodule "vendor/rails-mode"]
+	path = vendor/rails-mode
+	url = http://github.com/dima-exe/emacs-rails-reloaded.git
