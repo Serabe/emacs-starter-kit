@@ -38,6 +38,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/erc"))
 (add-to-list 'load-path (concat vendorfiles-dir "/gist"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/ido-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
@@ -137,6 +138,15 @@
 (autoload 'mode-compile-kill "mode-compile"
   "Command to kill a compilation launched by `mode-compile'" t)
 (global-set-key "\C-ck" 'mode-compile-kill)
+
+;; IDO
+(require 'ido)
+(ido-mode t)
+(setq ido-enable-flex-matching t) ;; enable fuzzy matching
+
+;; rvm
+(require 'rvm)
+(rvm-use-default)
 
 ;; My own .el file
 (load serabe-file)
