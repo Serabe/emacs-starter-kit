@@ -38,6 +38,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/erc"))
 (add-to-list 'load-path (concat vendorfiles-dir "/gist"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/groovy-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/ido-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
@@ -143,6 +144,13 @@
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t) ;; enable fuzzy matching
+
+;; Groovy
+(autoload 'groovy-mode "groovy-mode" "Groovy editing mode" t)
+(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
+;; for easyb specification files
+(add-to-list 'auto-mode-alist '("\.specification$" . groovy-mode))
+(add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
 
 ;; rvm
 (require 'rvm)
