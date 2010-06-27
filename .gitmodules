@@ -13,6 +13,3 @@
 [submodule "vendor/rails-mode"]
 	path = vendor/rails-mode
 	url = http://github.com/dima-exe/emacs-rails-reloaded.git
-[submodule "vendor/rvm"]
-	path = vendor/rvm
-	url = http://github.com/senny/rvm.el.git
