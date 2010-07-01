@@ -34,7 +34,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/erc"))
 (add-to-list 'load-path (concat vendorfiles-dir "/gist"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
-(add-to-list 'load-path (concat vendorfiles-dir "/google-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/google-maps"))
 (add-to-list 'load-path (concat vendorfiles-dir "/groovy-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/ido-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
