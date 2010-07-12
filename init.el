@@ -39,6 +39,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/ido-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/rhtml-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
@@ -162,6 +163,9 @@
 ;; rvm
 (require 'rvm)
 (rvm-use-default)
+
+;; rhtml
+(require 'rhtml-mode)
 
 ;; My own .el file
 (load serabe-file)
