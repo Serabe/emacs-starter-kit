@@ -25,10 +25,6 @@
 
 (add-to-list 'load-path dotfiles-dir)
 
-(require 'package)
-(package-initialize)
-(require 'starter-kit-elpa)
-
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path vendorfiles-dir)
@@ -50,6 +46,10 @@
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 (setq custom-file (concat dotfiles-dir "custom.el"))
 (setq serabe-file (concat dotfiles-dir "serabe.el"))
+
+(require 'package)
+(package-initialize)
+(require 'starter-kit-elpa)
 
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session
