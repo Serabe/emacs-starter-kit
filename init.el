@@ -40,6 +40,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/mode-compile"))
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/rhtml-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/rspec-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
@@ -166,5 +167,8 @@
 
 ;; My own .el file
 (load serabe-file)
+
+;; rspec
+(require 'rspec-mode)
 
 ;;; init.el ends here
