@@ -17,13 +17,8 @@ Load the appropriate .emacs-project files for a file." (let* ((full-name (symbol
 
 ;;;***
 
-<<<<<<< HEAD
-;;;### (autoloads nil nil ("project-local-variables-pkg.el") (19516
-;;;;;;  12158 176527))
-=======
 ;;;### (autoloads nil nil ("project-local-variables-pkg.el") (19515
 ;;;;;;  44566 459126))
->>>>>>> Update
 
 ;;;***
 
