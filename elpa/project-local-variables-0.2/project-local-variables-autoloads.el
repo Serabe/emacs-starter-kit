@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (plv-find-project-file) "project-local-variables"
-;;;;;;  "project-local-variables.el" (19516 12158))
+;;;;;;  "project-local-variables.el" (19515 44566))
 ;;; Generated autoloads from project-local-variables.el
 
 (autoload 'plv-find-project-file "project-local-variables" "\
@@ -17,8 +17,13 @@ Load the appropriate .emacs-project files for a file." (let* ((full-name (symbol
 
 ;;;***
 
+<<<<<<< HEAD
 ;;;### (autoloads nil nil ("project-local-variables-pkg.el") (19516
 ;;;;;;  12158 176527))
+=======
+;;;### (autoloads nil nil ("project-local-variables-pkg.el") (19515
+;;;;;;  44566 459126))
+>>>>>>> Update
 
 ;;;***
 
