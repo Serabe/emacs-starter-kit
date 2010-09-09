@@ -25,3 +25,6 @@
 [submodule "vendor/cucumber"]
 	path = vendor/cucumber
 	url = http://github.com/michaelklishin/cucumber.el.git
+[submodule "vendor/git-emacs"]
+	path = vendor/git-emacs
+	url = git://github.com/tsgates/git-emacs.git
