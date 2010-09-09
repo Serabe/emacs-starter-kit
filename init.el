@@ -33,6 +33,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/drag-stuff"))
 (add-to-list 'load-path (concat vendorfiles-dir "/erc"))
 (add-to-list 'load-path (concat vendorfiles-dir "/gist"))
+(add-to-list 'load-path (concat vendorfiles-dir "/git-emacs"))
 (add-to-list 'load-path (concat vendorfiles-dir "/go-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/google-maps"))
 (add-to-list 'load-path (concat vendorfiles-dir "/groovy-mode"))
@@ -107,6 +108,9 @@
 
 ;; Gist
 (require 'gist)
+
+;; git-emacs
+(require 'git-emacs)
 
 ;; Occam-mode
 (require 'occam-mode-load)
