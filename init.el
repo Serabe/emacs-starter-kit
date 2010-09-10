@@ -111,6 +111,8 @@
 
 ;; git-emacs
 (require 'git-emacs)
+(setq git-state-modeline-decoration 'git-state-decoration-large-dot)
+(require 'git-emacs-autoloads)
 
 ;; Occam-mode
 (require 'occam-mode-load)
