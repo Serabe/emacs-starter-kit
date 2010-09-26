@@ -22,6 +22,9 @@
 [submodule "vendor/rspec-mode"]
 	path = vendor/rspec-mode
 	url = http://github.com/pezra/rspec-mode.git
+[submodule "vendor/cucumber"]
+	path = vendor/cucumber
+	url = http://github.com/michaelklishin/cucumber.el.git
 [submodule "vendor/git-emacs"]
 	path = vendor/git-emacs
 	url = git://github.com/tsgates/git-emacs.git

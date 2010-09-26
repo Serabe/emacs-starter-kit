@@ -30,6 +30,7 @@
 (add-to-list 'load-path vendorfiles-dir)
 (add-to-list 'load-path (concat vendorfiles-dir "/coffee-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/color-theme"))
+(add-to-list 'load-path (concat vendorfiles-dir "/cucumber"))
 (add-to-list 'load-path (concat vendorfiles-dir "/drag-stuff"))
 (add-to-list 'load-path (concat vendorfiles-dir "/erc"))
 (add-to-list 'load-path (concat vendorfiles-dir "/gist"))
@@ -181,5 +182,9 @@
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
+
+;; cucumber
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 ;;; init.el ends here
