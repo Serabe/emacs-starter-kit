@@ -43,6 +43,7 @@
 (add-to-list 'load-path (concat vendorfiles-dir "/occam-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/rhtml-mode"))
 (add-to-list 'load-path (concat vendorfiles-dir "/rspec-mode"))
+(add-to-list 'load-path (concat vendorfiles-dir "/undo-tree"))
 (add-to-list 'load-path (concat vendorfiles-dir "/yasnippet"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
@@ -184,5 +185,9 @@
 ;; cucumber
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
+;; undo-tree
+(require 'undo-tree)
+(global-undo-tree-mode)
 
 ;;; init.el ends here
