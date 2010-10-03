@@ -13,9 +13,6 @@
 [submodule "vendor/rails-mode"]
 	path = vendor/rails-mode
 	url = http://github.com/dima-exe/emacs-rails-reloaded.git
-[submodule "vendor/google-maps"]
-	path = vendor/google-maps
-	url = git://git.naquadah.org/~jd/jd-el.git
 [submodule "vendor/rhtml-mode"]
 	path = vendor/rhtml-mode
 	url = http://github.com/eschulte/rhtml.git
