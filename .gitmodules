@@ -25,3 +25,6 @@
 [submodule "vendor/git-emacs"]
 	path = vendor/git-emacs
 	url = git://github.com/tsgates/git-emacs.git
+[submodule "vendor/google-maps"]
+	path = vendor/google-maps
+	url = git://git.naquadah.org/google-maps.git
